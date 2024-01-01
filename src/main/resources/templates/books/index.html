@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All books</title>
+</head>
+<body>
+<button><a th:href="@{books/new}">Добавить книгу</a></button><br>
+<div th:each="book :${books}">
+    <a style="color:black" th:href="@{books/{id}(id=${book.getBook_id()})}" th:text="${book.toString()}"></a>
+</div>
+</body>
+</html>
